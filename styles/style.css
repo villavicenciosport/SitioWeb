@@ -1,0 +1,158 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ole&display=swap");
+/* font-family: "Ole", cursive; */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgb(103, 228, 207);
+  font-size: 30px;
+  padding: 30px;
+  /* position: sticky;
+  top: 0; */
+}
+
+/* Título */
+
+h1 {
+  font-family: "Ole", cursive;
+  font-size: 100px;
+  font-weight: 200px;
+  border: dashed;
+  margin: 0;
+}
+
+/* Menú */
+
+/* .menu-flex {
+  background-color: rgb(92, 144, 145);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} */
+
+.menu-flex {
+  background-color: rgb(92, 144, 145);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Cuerpo */
+
+body {
+  font-size: 18px;
+  background-color: rgb(251, 198, 207);
+  color: rgb(218, 130, 238);
+  margin: 0;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.destacado {
+  color: rgb(223, 14, 14);
+}
+
+section {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: rgb(251, 198, 207);
+  background-color: rgb(162, 213, 59);
+  margin-bottom: 40px;
+}
+
+#flecha {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 40px;
+  right: 40px;
+}
+
+/* Footer */
+
+footer {
+  color: rgb(251, 198, 207);
+  background-color: rgb(103, 228, 207);
+}
+
+/* CONTENEDOR GRID */
+.contenedor-grid {
+  display: grid;
+  /* declarar las áreas, cuadrícula, zonas */
+  grid-template-areas: "titulo titulo titulo" "texto1 texto1 texto1" "img1 texto2 texto2" "img1 texto3 img2";
+  /*cantidad y tamaño de cada fila */
+  grid-template-rows: auto;
+  /*cantidad y tamaño columna */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-img {
+  margin: 0 auto;
+}
+
+.titulo {
+  grid-area: titulo;
+  /* background-color: green; */
+}
+
+.texto1 {
+  grid-area: texto1;
+  /* background-color: gray; */
+}
+
+.texto3 {
+  grid-area: texto3;
+  /* background-color: yellow; */
+}
+
+.texto2 {
+  grid-area: texto2;
+  /* background-color: beige; */
+}
+
+.img1 {
+  grid-area: img1;
+  /* background-color: aquamarine; */
+}
+
+.img2 {
+  grid-area: img2;
+  /* background-color: violet; */
+}
+
+.img3 {
+  display: none;
+  /* background-color: brown; */
+}
+
+/* GALERÍA GRID */
+.galeria-grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+}
+
+.gal-img {
+  margin: auto 0;
+}
+
+gimg1 {
+  grid-area: gimg1;
+}
