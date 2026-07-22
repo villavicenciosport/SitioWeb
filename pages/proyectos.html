@@ -22,14 +22,22 @@
 
   <body>
     <header id="top">
-      <img src="../img/mareo.png" width="200px" />
+      <!-- <img src="./img/mareo.webp" width="200" /> -->
       <h1>Mi hermoso sitio web</h1>
       <nav class="menu-flex">
-        <h3><a href="../index.html">Inicio</a></h3>
-        <h3><a href="./sobre-mi.html">Sobre mí</a></h3>
-        <h3><a href="./proyectos.html">Proyectos</a></h3>
-        <h3><a href="./servicios.html">Servicios</a></h3>
-        <h3><a href="./contacto.html">Contacto</a></h3>
+        <a href="../index.html"
+          ><img
+            class="logo"
+            src="../img/mareo-logo.webp"
+            alt="Inicio"
+            width="100"
+        /></a>
+        <div class="menu-header">
+          <h3><a href="./sobre-mi.html">Sobre mí</a></h3>
+          <h3><a class="link-inhabilitado" href="">Proyectos</a></h3>
+          <h3><a href="./servicios.html">Servicios</a></h3>
+          <h3><a href="./contacto.html">Contacto</a></h3>
+        </div>
       </nav>
     </header>
 
@@ -37,20 +45,31 @@
       <section id="Proyectos">
         <h2>Proyectos</h2>
 
-        <article>
-          <h3>Ilustración editorial</h3>
-          <p>Creación de imágenes para acompañar textos y publicaciones.</p>
-        </article>
+        <div class="card contenedor-flexbox">
+          <div class="card box-proyectos">
+            <img src="" alt="" style="width: 100%" />
+            <div class="card ccont">
+              <h3>Ilustración editorial</h3>
+              <p>Creación de imágenes para acompañar textos y publicaciones.</p>
+            </div>
+          </div>
 
-        <article>
-          <h3>Diseño de personajes</h3>
-          <p>Desarrollo de personajes originales y exploración visual.</p>
-        </article>
+          <div class="card box-proyectos">
+            <img src="" alt="" style="width: 100%" />
+            <div class="card ccont">
+              <h3>Arte digital</h3>
+              <p>Experimentación con diferentes técnicas de ilustración.</p>
+            </div>
+          </div>
 
-        <article>
-          <h3>Arte digital</h3>
-          <p>Experimentación con diferentes técnicas de ilustración.</p>
-        </article>
+          <div class="card box-proyectos">
+            <img src="" alt="" style="width: 100%" />
+            <div class="card ccont">
+              <h3>Diseño de personajes</h3>
+              <p>Desarrollo de personajes originales y exploración visual.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>

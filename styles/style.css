@@ -13,10 +13,11 @@
 
 header {
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
   text-align: center;
   background-color: rgb(187, 214, 134);
+  border-bottom: 5px dotted rgb(100, 69, 54);
   /* position: sticky;
   top: 0; */
 }
@@ -31,10 +32,40 @@ header {
 } */
 
 .menu-flex {
-  background-color: rgb(187, 214, 134);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Cards */
+
+.card {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.card.contenedor-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.card.box-proyectos {
+  border: 5px rgb(100, 69, 54) dotted;
+  width: 200px;
+  padding: 10px;
 }
 
 /* Cuerpo */
@@ -57,7 +88,7 @@ section {
   padding: 20px;
   color: rgb(111, 143, 72);
   background-color: rgb(238, 241, 189);
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 /* Párrafo */
@@ -72,6 +103,8 @@ p {
   color: rgb(93, 169, 177);
 }
 
+/* Links */
+
 a {
   color: rgb(178, 103, 94);
   text-decoration: none;
@@ -81,24 +114,32 @@ a:hover {
   color: rgb(93, 169, 177);
 }
 
+.link-inhabilitado,
+.link-inhabilitado:hover {
+  color: grey;
+  cursor: default;
+}
+
 /* Headers */
 
 h1 {
   font-family: "Ole", cursive;
   font-size: 80px;
   font-weight: 400;
-
+  color: rgb(178, 103, 94);
   margin: 0 0 20px 0;
 }
 
 h2 {
   font-size: 30px;
   font-weight: 600;
+  color: rgb(178, 103, 94);
 }
 
 h3 {
   font-size: 22px;
   font-weight: 500;
+  color: rgb(178, 103, 94);
 }
 
 .flecha {
@@ -107,6 +148,11 @@ h3 {
   height: 100px;
   bottom: 40px;
   right: 40px;
+  color: rgb(178, 103, 94);
+}
+
+button {
+  padding: 10px;
 }
 
 /* Footer */
