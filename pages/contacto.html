@@ -21,50 +21,66 @@
   </head>
 
   <body>
-    <header id="top">
-      <!-- <img src="./img/mareo.webp" width="200" /> -->
-      <h1>Mi hermoso sitio web</h1>
-      <nav class="menu-flex">
-        <a href="../index.html"
-          ><img class="logo" src="../img/mareo-logo.webp" width="100"
-        /></a>
-        <div class="menu-header">
-          <h3><a href="./sobre-mi.html">Sobre mí</a></h3>
-          <h3><a href="./proyectos.html">Proyectos</a></h3>
-          <h3><a href="./servicios.html">Servicios</a></h3>
-          <h3><a class="link-inhabilitado" href="">Contacto</a></h3>
-        </div>
-      </nav>
-    </header>
+    <div class="layout-grid">
+      <header id="top">
+        <!-- <img src="./img/mareo.webp" width="200" /> -->
+        <h1>Mi hermoso sitio web</h1>
+        <nav class="menu-flex">
+          <a href="../index.html"
+            ><img
+              class="logo"
+              src="../img/mareo-logo.webp"
+              alt="Inicio"
+              width="100"
+          /></a>
+          <div class="menu-header">
+            <h3><a href="./sobre-mi.html">Sobre mí</a></h3>
+            <h3><a href="./proyectos.html">Proyectos</a></h3>
+            <h3><a href="./servicios.html">Servicios</a></h3>
+            <h3><a class="link-inhabilitado" href="">Contacto</a></h3>
+          </div>
+        </nav>
+      </header>
 
-    <main>
-      <section id="Contacto">
-        <h2>Contacto</h2>
+      <main>
+        <section id="Contacto">
+          <h2>Contacto</h2>
 
-        <p>Podés comunicarte para consultas o propuestas de proyectos.</p>
+          <p>Podés comunicarte para consultas o propuestas de proyectos.</p>
 
-        <form>
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" />
-          <br />
+          <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" />
+            <br />
 
-          <label for="apellido">Apellido</label>
-          <input type="text" id="apellido" name="apellido" />
-          <br />
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" />
+            <br />
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
-          <!-- type="email" valida el formato -->
-          <br />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <!-- type="email" valida el formato -->
+            <br />
 
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje"></textarea>
-          <br />
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje"></textarea>
+            <br />
 
-          <!-- type="submit" hace que el botón envíe el formulario -->
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
+            <!-- type="submit" hace que el botón envíe el formulario -->
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+      <aside>
+        <h2>bienvenid@s!!!</h2>
+        <h3><a href="/index.html">Volver a inicio</a></h3>
+        <h3><a href="/index.html#galeria">Galería</a></h3>
+        <p>frase inspiracional ahre</p>
+        <div class="moodboard"></div>
+        <img src="/img/mareo.webp" width="300" alt="mareo" />
+      </aside>
+
+      <footer>Mi footer</footer>
+    </div>
   </body>
 </html>

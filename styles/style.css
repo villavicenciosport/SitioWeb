@@ -13,8 +13,8 @@
 
 header {
   width: 100%;
-  padding: 20px;
-  margin-bottom: 50px;
+  padding: 1.25rem;
+  margin-bottom: 3.125rem;
   text-align: center;
   background-color: rgb(187, 214, 134);
   border-bottom: 5px dotted rgb(100, 69, 54);
@@ -46,7 +46,7 @@ header {
   gap: 25px;
 }
 
-/* Cards */
+/* Cards (Flex-box) */
 
 .card {
   text-align: center;
@@ -57,15 +57,55 @@ header {
 .card.contenedor-flexbox {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 1.25rem;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .card.box-proyectos {
   border: 5px rgb(100, 69, 54) dotted;
-  width: 200px;
+  /* width: 200px; */
+  flex: 1;
   padding: 10px;
+}
+
+/* CARDS SERVICIOS (GRIDBOX) (MOBILE) */
+
+.card.contenedor-gridbox {
+  display: grid;
+  grid-template-areas:
+    "personalizada"
+    "personajes"
+    "editoriales"
+    "concept";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 1.25rem;
+  gap: 6px;
+}
+
+.card.box-servicios {
+  border: 5px rgb(100, 69, 54) dotted;
+  width: 100%;
+  padding: 10px;
+  margin: 4px;
+}
+.personalizada {
+  grid-area: personalizada;
+}
+
+.personajes {
+  grid-area: personajes;
+}
+
+.editoriales {
+  grid-area: editoriales;
+}
+
+.concept {
+  grid-area: concept;
 }
 
 /* Cuerpo */
@@ -80,15 +120,16 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Sección */
+/* Secciones */
 
 section {
-  width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 80%;
+  padding: 2.5rem;
+  margin: 2rem auto;
+  margin-top: 0;
   color: rgb(111, 143, 72);
   background-color: rgb(238, 241, 189);
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
 /* Párrafo */
@@ -127,7 +168,7 @@ h1 {
   font-size: 80px;
   font-weight: 400;
   color: rgb(178, 103, 94);
-  margin: 0 0 20px 0;
+  margin: 0 0 1.25rem 0;
 }
 
 h2 {
@@ -158,64 +199,316 @@ button {
 /* Footer */
 
 footer {
-  color: rgb(196, 163, 129);
+  color: rgb(178, 103, 94);
   background-color: rgb(187, 214, 134);
 }
 
-/* CONTENEDOR GRID */
-.contenedor-grid {
+/* LAYOUT GRID (MOBILE) */
+.layout-grid {
   display: grid;
-  /* declarar las áreas, cuadrícula, zonas */
-  grid-template-areas: "titulo-presentacion titulo-presentacion titulo-presentacion" "introduccion-presentacion introduccion-presentacion introduccion-presentacion" "imagen-principal-trebol desarrollo-presentacion desarrollo-presentacion" "imagen-principal-trebol cierre-presentacion imagen-secundaria-trebol";
-  /*cantidad y tamaño de cada fila */
-  grid-template-rows: auto;
-  /*cantidad y tamaño columna */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+  grid-template-columns: 1fr;
+  min-height: 100vh; /* (para que todo el layout ocupe el largo entero de la pantalla) */
+}
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  margin: 2rem auto;
+  margin-top: 0;
+  padding: 2.5rem;
+  height: fit-content;
+  width: 80%;
+  background-color: rgb(238, 241, 189);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* PRESENTACIÓN GRID (MOBILE) */
+.presentacion-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid-img {
   margin: 0 auto;
-}
-
-.titulo titulo-presentacion {
-  grid-area: titulo-presentacion;
-  /* background-color: green; */
-}
-
-.introduccion-presentacion {
-  grid-area: introduccion-presentacion;
-  /* background-color: gray; */
-}
-
-.cierre-presentacion {
-  grid-area: cierre-presentacion;
-  /* background-color: yellow; */
-}
-
-.desarrollo-presentacion {
-  grid-area: desarrollo-presentacion;
-  /* background-color: beige; */
+  object-fit: cover;
+  margin: 2rem;
 }
 
 .imagen-principal-trebol {
-  grid-area: imagen-principal-trebol;
-  /* background-color: aquamarine; */
-}
-
-.imagen-secundaria-trebol {
-  grid-area: imagen-secundaria-trebol;
-  /* background-color: violet; */
-}
-
-.imagen-secundaria-vaquita {
   display: none;
-  /* background-color: brown; */
+}
+.imagen-principal-vaquita {
+  grid-area: imagen-principal-vaquita;
+  display: block;
+  order: 1;
+}
+.introduccion-presentacion {
+  order: 2;
 }
 
-/* GALERÍA GRID */
+.desarrollo-presentacion {
+  order: 3;
+}
+.cierre-presentacion {
+  order: 4;
+}
+
+/* GALERIA GRID (MOBILE) */
 .galeria-grid {
-  margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.col {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* OTROS DISPOSITIVOS */
+/* TABLET & PANTALLA CHICA */
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    background-color: blue;
+    width: 100%;
+  }
+
+  section {
+    padding: 2.5rem;
+    width: 80%;
+    margin: 2rem auto;
+    margin-top: 0;
+    color: rgb(111, 143, 72);
+    background-color: rgb(238, 241, 189);
+    margin-bottom: 2rem;
+  }
+
+  /* LAYOUT GRID (TABLET) */
+  .layout-grid {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+    min-height: 100vh; /* (para que todo el layout ocupe el largo entero de la pantalla) */
+  }
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: aside;
+    margin: 2rem auto;
+    margin-top: 0;
+    padding: 2.5rem;
+    height: fit-content;
+    width: 80%;
+    background-color: rgb(238, 241, 189);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  /* PRESENTACIÓN GRID (TABLET) */
+  .presentacion-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagen-principal-trebol {
+    order: 1;
+    display: block;
+  }
+  .introduccion-presentacion {
+    order: 2;
+  }
+
+  .desarrollo-presentacion {
+    order: 3;
+  }
+  .cierre-presentacion {
+    order: 4;
+  }
+
+  .imagen-principal-vaquita {
+    display: none;
+  }
+
+  /* GALERIA GRID (TABLET)*/
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .col {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* CARDS SERVICIOS (TABLET) */
+  .card.contenedor-gridbox {
+    display: grid;
+    grid-template-areas:
+      "personalizada personajes"
+      "editoriales concept";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1.25rem;
+    gap: 6px;
+  }
+}
+
+/* PANTALLAS GRANDES */
+@media (min-width: 1024px) {
+  /* BODY (PANTALLA GRANDE) */
+  body {
+    background-color: orange;
+    width: 100%;
+  }
+
+  /* LAYOUT GRID (PANTALLA GRANDE) */
+  .layout-grid {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+    grid-template-columns: 1fr 400px; /* (2 columnas) */
+    grid-template-rows: auto 1fr auto; /* (3 filas) */
+    min-height: 100vh; /* (para que todo el layout ocupe la pantalla entera) */
+  }
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: aside;
+    margin-right: 3.125rem;
+    margin-bottom: 3.125rem;
+    height: fit-content;
+    width: auto;
+    padding: 1.25rem;
+    background-color: rgb(238, 241, 189);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  /* PRESENTACIÓN GRID (PANTALLA GRANDE) */
+  .presentacion-grid {
+    display: grid;
+    /* declarar las áreas, cuadrícula, zonas */
+    grid-template-areas:
+      "imagen-principal-trebol introduccion-presentacion"
+      "imagen-principal-trebol desarrollo-presentacion"
+      "cierre-presentacion cierre-presentacion";
+    /*cantidad y tamaño de cada fila */
+    grid-template-rows: auto;
+    /*cantidad y tamaño columna */
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .titulo titulo-presentacion {
+    grid-area: titulo-presentacion;
+    /* background-color: green; */
+  }
+
+  .introduccion-presentacion {
+    grid-area: introduccion-presentacion;
+    /* background-color: gray; */
+  }
+
+  .cierre-presentacion {
+    grid-area: cierre-presentacion;
+    /* background-color: yellow; */
+  }
+
+  .desarrollo-presentacion {
+    grid-area: desarrollo-presentacion;
+    /* background-color: beige; */
+  }
+
+  .imagen-principal-trebol {
+    grid-area: imagen-principal-trebol;
+    margin: 8px auto;
+    display: block;
+    /* background-color: aquamarine; */
+  }
+
+  .imagen-principal-vaquita {
+    display: none;
+    margin: 2px;
+    /* background-color: brown; */
+  }
+
+  /* GALERIA GRID (PANTALLA GRANDE) */
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .col {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* CARDS SERVICIOS (PANTALLA GRANDE) */
+  .card.contenedor-gridbox {
+    display: grid;
+    grid-template-areas:
+      "personalizada personalizada"
+      "personajes editoriales"
+      "personajes concept";
+
+    padding: 1.25rem;
+    gap: 6px;
+  }
+
+  .card.box-servicios {
+    border: 5px rgb(100, 69, 54) dotted;
+    width: 100%;
+    padding: 10px;
+    margin: 4px;
+  }
 }
