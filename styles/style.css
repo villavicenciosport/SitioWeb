@@ -13,7 +13,7 @@
 
 header {
   width: 100%;
-  padding: 1.25rem;
+  padding: 20px;
   margin-bottom: 3.125rem;
   text-align: center;
   background-color: rgb(187, 214, 134);
@@ -46,6 +46,23 @@ header {
   gap: 25px;
 }
 
+/* Contacto */
+#Contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 auto;
+
+  max-width: 50%;
+
+  padding: 20px;
+  border: 5px dotted rgb(100, 69, 54);
+
+  font-size: 18px;
+  color: rgb(111, 143, 72);
+  line-height: 1.6;
+}
+
 /* Cards (Flex-box) */
 
 .card {
@@ -59,7 +76,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding: 1.25rem;
+  padding: 20px;
   flex-wrap: wrap;
   gap: 6px;
 }
@@ -68,7 +85,7 @@ header {
   border: 5px rgb(100, 69, 54) dotted;
   /* width: 200px; */
   flex: 1;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* CARDS SERVICIOS (GRIDBOX) (MOBILE) */
@@ -82,14 +99,14 @@ header {
     "concept";
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
-  padding: 1.25rem;
+  padding: 20px;
   gap: 6px;
 }
 
 .card.box-servicios {
   border: 5px rgb(100, 69, 54) dotted;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   margin: 4px;
 }
 .personalizada {
@@ -124,7 +141,7 @@ body {
 
 section {
   width: 80%;
-  padding: 2.5rem;
+  padding: 40px;
   margin: 2rem auto;
   margin-top: 0;
   color: rgb(111, 143, 72);
@@ -142,6 +159,13 @@ p {
 
 .texto-destacado {
   color: rgb(93, 169, 177);
+}
+
+ul {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(178, 103, 94);
+  list-style-type: none;
 }
 
 /* Links */
@@ -194,11 +218,16 @@ h3 {
 
 button {
   padding: 10px;
+  max-width: 30%;
+  max-height: 50px;
+  margin: 6px auto;
+  text-align: center;
 }
 
 /* Footer */
 
 footer {
+  padding: 20px;
   color: rgb(178, 103, 94);
   background-color: rgb(187, 214, 134);
 }
@@ -226,7 +255,7 @@ aside {
   grid-area: aside;
   margin: 2rem auto;
   margin-top: 0;
-  padding: 2.5rem;
+  padding: 40px;
   height: fit-content;
   width: 80%;
   background-color: rgb(238, 241, 189);
@@ -288,12 +317,12 @@ footer {
 /* TABLET & PANTALLA CHICA */
 @media (min-width: 481px) and (max-width: 1023px) {
   body {
-    background-color: blue;
+    background-color: rgb(185, 158, 161);
     width: 100%;
   }
 
   section {
-    padding: 2.5rem;
+    padding: 40px;
     width: 80%;
     margin: 2rem auto;
     margin-top: 0;
@@ -325,7 +354,7 @@ footer {
     grid-area: aside;
     margin: 2rem auto;
     margin-top: 0;
-    padding: 2.5rem;
+    padding: 40px;
     height: fit-content;
     width: 80%;
     background-color: rgb(238, 241, 189);
@@ -384,7 +413,7 @@ footer {
       "editoriales concept";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    padding: 1.25rem;
+    padding: 20px;
     gap: 6px;
   }
 }
@@ -393,7 +422,7 @@ footer {
 @media (min-width: 1024px) {
   /* BODY (PANTALLA GRANDE) */
   body {
-    background-color: orange;
+    background-color: rbg(221, 208, 106);
     width: 100%;
   }
 
@@ -422,7 +451,7 @@ footer {
     margin-bottom: 3.125rem;
     height: fit-content;
     width: auto;
-    padding: 1.25rem;
+    padding: 20px;
     background-color: rgb(238, 241, 189);
     display: flex;
     flex-direction: column;
@@ -501,14 +530,14 @@ footer {
       "personajes editoriales"
       "personajes concept";
 
-    padding: 1.25rem;
+    padding: 20px;
     gap: 6px;
   }
 
   .card.box-servicios {
     border: 5px rgb(100, 69, 54) dotted;
     width: 100%;
-    padding: 10px;
+    padding: 20pxpx;
     margin: 4px;
   }
 }

@@ -11,13 +11,14 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
 
   <body>
@@ -33,12 +34,12 @@
               alt="Inicio"
               width="100"
           /></a>
-          <div class="menu-header">
-            <h3><a href="./sobre-mi.html">Sobre mí</a></h3>
-            <h3><a href="./proyectos.html">Proyectos</a></h3>
-            <h3><a href="./servicios.html">Servicios</a></h3>
-            <h3><a class="link-inhabilitado" href="">Contacto</a></h3>
-          </div>
+          <ul class="menu-header">
+            <li><a href="./sobre-mi.html">Sobre mí</a></li>
+            <li><a href="./proyectos.html">Proyectos</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+            <li><a class="link-inhabilitado" href="">Contacto</a></li>
+          </ul>
         </nav>
       </header>
 
@@ -51,20 +52,16 @@
           <form>
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" />
-            <br />
 
             <label for="apellido">Apellido</label>
             <input type="text" id="apellido" name="apellido" />
-            <br />
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" />
             <!-- type="email" valida el formato -->
-            <br />
 
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje"></textarea>
-            <br />
 
             <!-- type="submit" hace que el botón envíe el formulario -->
             <button type="submit">Enviar</button>
@@ -80,7 +77,9 @@
         <img src="/img/mareo.webp" width="300" alt="mareo" />
       </aside>
 
-      <footer>Mi footer</footer>
+      <footer>
+        <h3>Mi footer</h3>
+      </footer>
     </div>
   </body>
 </html>
