@@ -153,6 +153,7 @@ h3 {
   top: 100%;
   right: 0;
   width: fit-content;
+  z-index: 999;
 
   background-color: rgb(238, 241, 189);
   padding: 1rem;
@@ -175,7 +176,7 @@ h3 {
   line-height: 1.6;
 }
 
-/* Cards (Flex-box) */
+/* Cards (Flex-box) (MOBILE) */
 
 .card {
   text-align: center;
@@ -185,7 +186,7 @@ h3 {
 
 .card.contenedor-flexbox {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
@@ -599,6 +600,31 @@ footer {
   .col {
     width: 100%;
     object-fit: cover;
+  }
+
+  /* Cards (Flex-box) (DESKTOP) */
+
+  .card {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  .card.contenedor-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .card.box-proyectos {
+    border: 5px rgb(100, 69, 54) dotted;
+    /* width: 200px; */
+    flex: 1;
+    padding: 20px;
   }
 
   /* CARDS SERVICIOS (DESKTOP) */
