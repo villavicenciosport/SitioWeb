@@ -22,109 +22,6 @@ header {
   top: 0; */
 }
 
-/* Menú */
-
-/* .menu-flex {
-  background-color: rgb(92, 144, 145);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-} */
-
-.menu-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 25px;
-}
-
-/* Contacto (MOBILE) */
-#Contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin: 0 auto;
-
-  max-width: 90%;
-
-  padding: 20px;
-  border: 5px dotted rgb(100, 69, 54);
-
-  font-size: 18px;
-  color: rgb(111, 143, 72);
-  line-height: 1.6;
-}
-
-/* Cards (Flex-box) */
-
-.card {
-  text-align: center;
-  background-color: transparent;
-  border: none;
-}
-
-.card.contenedor-flexbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.card.box-proyectos {
-  border: 5px rgb(100, 69, 54) dotted;
-  /* width: 200px; */
-  flex: 1;
-  padding: 20px;
-}
-
-/* CARDS SERVICIOS (GRIDBOX) (MOBILE) */
-
-.card.contenedor-gridbox {
-  display: grid;
-  grid-template-areas:
-    "personalizada"
-    "personajes"
-    "editoriales"
-    "concept";
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  padding: 20px;
-  gap: 6px;
-}
-
-.card.box-servicios {
-  border: 5px rgb(100, 69, 54) dotted;
-  width: 100%;
-  padding: 20px;
-  margin: 4px;
-}
-.personalizada {
-  grid-area: personalizada;
-}
-
-.personajes {
-  grid-area: personajes;
-}
-
-.editoriales {
-  grid-area: editoriales;
-}
-
-.concept {
-  grid-area: concept;
-}
-
 /* Cuerpo */
 
 body {
@@ -207,6 +104,141 @@ h3 {
   color: rgb(178, 103, 94);
 }
 
+/* Menú (MOBILE) */
+
+.menu-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-header {
+  display: none;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px; */
+}
+
+/* MENU BS (MOBILE) */
+
+.navbar-toggler {
+  border: none;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler-icon {
+  margin: auto;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar {
+  position: relative;
+  background-color: rgb(196, 163, 129);
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: fit-content;
+
+  background-color: rgb(238, 241, 189);
+  padding: 1rem;
+}
+
+/* Contacto (MOBILE) */
+#Contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 auto;
+
+  max-width: 90%;
+
+  padding: 20px;
+  border: 5px dotted rgb(100, 69, 54);
+
+  font-size: 18px;
+  color: rgb(111, 143, 72);
+  line-height: 1.6;
+}
+
+/* Cards (Flex-box) */
+
+.card {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.card.contenedor-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card.box-proyectos {
+  border: 5px rgb(100, 69, 54) dotted;
+  /* width: 200px; */
+  flex: 1;
+  padding: 20px;
+}
+
+/* CARDS SERVICIOS (GRIDBOX) (MOBILE) */
+
+.card.contenedor-gridbox {
+  display: grid;
+  grid-template-areas:
+    "personalizada"
+    "personajes"
+    "editoriales"
+    "concept";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 20px;
+  gap: 6px;
+}
+
+.card.box-servicios {
+  border: 5px rgb(100, 69, 54) dotted;
+  width: 100%;
+  padding: 20px;
+  margin: 4px;
+}
+.personalizada {
+  grid-area: personalizada;
+}
+
+.personajes {
+  grid-area: personajes;
+}
+
+.editoriales {
+  grid-area: editoriales;
+}
+
+.concept {
+  grid-area: concept;
+}
+
+/* FLECHA */
+
 .flecha {
   position: fixed;
   width: 100px;
@@ -215,6 +247,8 @@ h3 {
   right: 40px;
   color: rgb(178, 103, 94);
 }
+
+/* BOTONES */
 
 button {
   padding: 10px;
@@ -435,15 +469,26 @@ footer {
   }
 }
 
-/* PANTALLAS GRANDES */
+/* DESKTOP */
 @media (min-width: 1024px) {
-  /* BODY (PANTALLA GRANDE) */
+  /* BODY (DESKTOP) */
   body {
     background-color: rbg(221, 208, 106);
     width: 100%;
   }
 
-  /* Contacto (PANTALLA GRANDE) */
+  /* MENU BS (DESKTOP) */
+
+  .navbar-collapse {
+    position: static;
+    background-color: transparent;
+    width: 100%;
+  }
+  .navbar {
+    background-color: transparent;
+  }
+
+  /* Contacto (DESKTOP) */
   #Contacto form {
     display: flex;
     flex-direction: column;
@@ -460,7 +505,7 @@ footer {
     line-height: 1.6;
   }
 
-  /* LAYOUT GRID (PANTALLA GRANDE) */
+  /* LAYOUT GRID (DESKTOP) */
   .layout-grid {
     display: grid;
     grid-template-areas:
@@ -496,7 +541,7 @@ footer {
     grid-area: footer;
   }
 
-  /* PRESENTACIÓN GRID (PANTALLA GRANDE) */
+  /* PRESENTACIÓN GRID (DESKTOP) */
   .presentacion-grid {
     display: grid;
     /* declarar las áreas, cuadrícula, zonas */
@@ -543,7 +588,7 @@ footer {
     /* background-color: brown; */
   }
 
-  /* GALERIA GRID (PANTALLA GRANDE) */
+  /* GALERIA GRID (DESKTOP) */
   .galeria-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -556,7 +601,7 @@ footer {
     object-fit: cover;
   }
 
-  /* CARDS SERVICIOS (PANTALLA GRANDE) */
+  /* CARDS SERVICIOS (DESKTOP) */
   .card.contenedor-gridbox {
     display: grid;
     grid-template-areas:
