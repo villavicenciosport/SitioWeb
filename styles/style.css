@@ -56,6 +56,7 @@ p {
 
 .texto-destacado {
   color: rgb(93, 169, 177);
+  font-weight: bold;
 }
 
 /* Links */
@@ -235,6 +236,7 @@ h3 {
   width: 100%;
   padding: 20px;
   margin: 4px;
+  justify-content: center;
 }
 .personalizada {
   grid-area: personalizada;
@@ -267,7 +269,7 @@ h3 {
 
 button {
   padding: 10px;
-  max-width: 30%;
+  max-width: 100%;
   max-height: 50px;
   margin: 6px auto;
   text-align: center;
@@ -713,5 +715,25 @@ footer {
     border: 5px rgb(100, 69, 54) dotted;
     padding: 20px;
     margin: 4px;
+  }
+
+  /* FAQ (MOBILE) */
+  .accordion-item {
+    background-color: transparent;
+  }
+
+  .accordion {
+    --bs-accordion-btn-bg: rgb(187, 214, 134);
+    --bs-accordion-btn-color: rgb(178, 103, 94);
+    --bs-accordion-active-bg: rgb(221, 208, 106);
+    --bs-accordion-active-color: rgb(111, 143, 72);
+    font-size: 18px;
+    color: rgb(100, 69, 54);
+    line-height: 1.6;
+  }
+
+  .accordion-button {
+    font-size: 22px;
+    font-weight: 500;
   }
 }
