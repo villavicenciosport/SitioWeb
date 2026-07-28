@@ -58,13 +58,6 @@ p {
   color: rgb(93, 169, 177);
 }
 
-ul {
-  font-size: 22px;
-  font-weight: 500;
-  color: rgb(178, 103, 94);
-  list-style-type: none;
-}
-
 /* Links */
 
 a {
@@ -148,11 +141,17 @@ h3 {
   background-color: rgb(196, 163, 129);
 }
 
+.navbar ul {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(178, 103, 94);
+  list-style-type: none;
+}
+
 .navbar-collapse {
   position: absolute;
   top: 100%;
   right: 0;
-  width: fit-content;
   z-index: 999;
 
   background-color: rgb(238, 241, 189);
@@ -194,16 +193,31 @@ h3 {
   gap: 6px;
 }
 
-.card.box-proyectos {
-  border: 5px rgb(100, 69, 54) dotted;
-  /* width: 200px; */
-  flex: 1;
+/* .card.box-proyectos {
+  border: 5px rgb(100, 69, 54) dotted; */
+/* width: 200px; */
+/* flex: 1;
   padding: 20px;
+} */
+
+.btn {
+  border: rgb(178, 103, 94);
+  background-color: rgb(178, 103, 94);
+}
+
+.btn:hover {
+  border: rgb(111, 143, 72);
+  background-color: rgb(111, 143, 72);
+}
+
+.desc-carrusel .btn {
+  position: relative;
+  z-index: 3;
 }
 
 /* CARDS SERVICIOS (GRIDBOX) (MOBILE) */
 
-.card.contenedor-gridbox {
+.contenedor-gridbox {
   display: grid;
   grid-template-areas:
     "personalizada"
@@ -291,7 +305,6 @@ aside {
   margin: 2rem auto;
   margin-top: 0;
   padding: 40px;
-  height: fit-content;
   width: 80%;
   background-color: rgb(238, 241, 189);
   display: flex;
@@ -336,7 +349,7 @@ footer {
 }
 
 /* GALERIA GRID (MOBILE) */
-.galeria-grid {
+/* .galeria-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -346,6 +359,54 @@ footer {
 .col {
   width: 100%;
   object-fit: cover;
+} */
+
+/* GALERIA BS (MOBILE) */
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-control-prev {
+  position: absolute;
+  top: 200px;
+  left: 1.2rem;
+}
+
+.carousel-control-next {
+  position: absolute;
+  top: 200px;
+  right: 1.2rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: 60%;
+  background-color: rgba(100, 69, 54, 0.8);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.desc-carrusel {
+  position: static;
+  background-color: rgb(187, 214, 134);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.desc-carrusel h5 {
+  margin-bottom: 0.5rem;
+}
+
+.carousel-indicators {
+  top: 340px;
 }
 
 /* OTROS DISPOSITIVOS */
@@ -445,7 +506,7 @@ footer {
   }
 
   /* GALERIA GRID (TABLET)*/
-  .galeria-grid {
+  /* .galeria-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -455,10 +516,10 @@ footer {
   .col {
     width: 100%;
     object-fit: cover;
-  }
+  } */
 
   /* CARDS SERVICIOS (TABLET) */
-  .card.contenedor-gridbox {
+  .contenedor-gridbox {
     display: grid;
     grid-template-areas:
       "personalizada personajes"
@@ -474,7 +535,7 @@ footer {
 @media (min-width: 1024px) {
   /* BODY (DESKTOP) */
   body {
-    background-color: rbg(221, 208, 106);
+    background-color: rgb(221, 208, 106);
     width: 100%;
   }
 
@@ -590,7 +651,7 @@ footer {
   }
 
   /* GALERIA GRID (DESKTOP) */
-  .galeria-grid {
+  /* .galeria-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -600,6 +661,13 @@ footer {
   .col {
     width: 100%;
     object-fit: cover;
+  } */
+
+  /* GALERIA BS (DESKTOP) */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   /* Cards (Flex-box) (DESKTOP) */
@@ -620,29 +688,30 @@ footer {
     gap: 6px;
   }
 
-  .card.box-proyectos {
+  /* .card.box-proyectos {
     border: 5px rgb(100, 69, 54) dotted;
     /* width: 200px; */
-    flex: 1;
-    padding: 20px;
-  }
+  /* flex: 1;
+  padding: 20px;
+}
+*/
 
   /* CARDS SERVICIOS (DESKTOP) */
-  .card.contenedor-gridbox {
+  .contenedor-gridbox {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "personalizada personalizada"
       "personajes editoriales"
       "personajes concept";
-
+    grid-template-rows: repeat(3, 1fr);
     padding: 20px;
     gap: 6px;
   }
 
   .card.box-servicios {
     border: 5px rgb(100, 69, 54) dotted;
-    width: 100%;
-    padding: 20pxpx;
+    padding: 20px;
     margin: 4px;
   }
 }
