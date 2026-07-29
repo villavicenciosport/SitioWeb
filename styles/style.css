@@ -398,12 +398,12 @@ footer {
 .carousel-control-next,
 .carousel-control-prev {
   position: absolute;
-  bottom: 150px;
+  top: 160px;
   padding: 10px;
   max-width: 100%;
   max-height: 100%;
   margin: 6px auto;
-  text-align: center;
+  align-items: normal;
 }
 
 .carousel-control-prev {
