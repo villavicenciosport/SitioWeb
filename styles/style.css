@@ -176,6 +176,16 @@ h3 {
   line-height: 1.6;
 }
 
+/* BOTÓN ENVIAR (CONTACTO) */
+
+.boton-enviar-contacto {
+  padding: 10px;
+  width: fit-content;
+  height: 100%;
+  margin: 6px auto;
+  text-align: center;
+}
+
 /* Cards (Flex-box) (MOBILE) */
 
 .card {
@@ -254,6 +264,27 @@ h3 {
   grid-area: concept;
 }
 
+/* FAQ (MOBILE) */
+.accordion-item {
+  background-color: transparent;
+}
+
+.accordion {
+  --bs-accordion-btn-bg: rgb(187, 214, 134);
+  --bs-accordion-btn-color: rgb(178, 103, 94);
+  --bs-accordion-active-bg: rgb(221, 208, 106);
+  --bs-accordion-active-color: rgb(111, 143, 72);
+  font-size: 18px;
+  color: rgb(100, 69, 54);
+  line-height: 1.6;
+}
+
+.accordion-button {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 1rem;
+}
+
 /* FLECHA */
 
 .flecha {
@@ -263,16 +294,6 @@ h3 {
   bottom: 40px;
   right: 40px;
   color: rgb(178, 103, 94);
-}
-
-/* BOTONES */
-
-button {
-  padding: 10px;
-  max-width: 100%;
-  max-height: 50px;
-  margin: 6px auto;
-  text-align: center;
 }
 
 /* Footer */
@@ -374,15 +395,22 @@ footer {
   position: relative;
 }
 
+.carousel-control-next,
 .carousel-control-prev {
   position: absolute;
-  top: 200px;
+  bottom: 150px;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 6px auto;
+  text-align: center;
+}
+
+.carousel-control-prev {
   left: 1.2rem;
 }
 
 .carousel-control-next {
-  position: absolute;
-  top: 200px;
   right: 1.2rem;
 }
 
@@ -530,6 +558,27 @@ footer {
     grid-template-rows: repeat(2, 1fr);
     padding: 20px;
     gap: 6px;
+  }
+
+  /* FAQ (TABLET) */
+  .accordion-item {
+    background-color: transparent;
+  }
+
+  .accordion {
+    --bs-accordion-btn-bg: rgb(187, 214, 134);
+    --bs-accordion-btn-color: rgb(178, 103, 94);
+    --bs-accordion-active-bg: rgb(221, 208, 106);
+    --bs-accordion-active-color: rgb(111, 143, 72);
+    font-size: 18px;
+    color: rgb(100, 69, 54);
+    line-height: 1.6;
+  }
+
+  .accordion-button {
+    font-size: 22px;
+    font-weight: 500;
+    padding: 1rem;
   }
 }
 
@@ -715,25 +764,5 @@ footer {
     border: 5px rgb(100, 69, 54) dotted;
     padding: 20px;
     margin: 4px;
-  }
-
-  /* FAQ (MOBILE) */
-  .accordion-item {
-    background-color: transparent;
-  }
-
-  .accordion {
-    --bs-accordion-btn-bg: rgb(187, 214, 134);
-    --bs-accordion-btn-color: rgb(178, 103, 94);
-    --bs-accordion-active-bg: rgb(221, 208, 106);
-    --bs-accordion-active-color: rgb(111, 143, 72);
-    font-size: 18px;
-    color: rgb(100, 69, 54);
-    line-height: 1.6;
-  }
-
-  .accordion-button {
-    font-size: 22px;
-    font-weight: 500;
   }
 }
