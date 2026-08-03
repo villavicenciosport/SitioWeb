@@ -1,3 +1,5 @@
+@use "../utilities/_variables.scss";
+
 /* Reseset */
 * {
   margin: 0;
@@ -61,15 +63,14 @@ a {
   color: variables.$colorFontSecondary;
   text-decoration: none;
 
+  .link-inhabilitado {
+    color: grey;
+    cursor: default;
+  }
+
   &:hover {
     color: variables.$colorDestacado;
   }
-}
-
-.link-inhabilitado,
-.link-inhabilitado:hover {
-  color: grey;
-  cursor: default;
 }
 
 // TABLET
@@ -83,7 +84,7 @@ a {
     padding: variables.$padding-base;
     width: 80%;
     margin: 0 auto variables.$margin-small;
-    color: variables.$colorVerdeSeco;
+    color: variables.$colorFontTertiary;
     background-color: variables.$colorbgContainer;
   }
 }

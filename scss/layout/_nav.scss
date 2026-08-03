@@ -1,3 +1,5 @@
+@use "../utilities/_variables.scss";
+
 /* Menú (MOBILE) */
 .menu-flex {
   display: flex;
@@ -25,14 +27,23 @@
     font-weight: 500;
     color: variables.$colorFontSecondary;
     list-style-type: none;
+  }
 
-    a {
-      color: variables.$colorFontSecondary;
-      text-decoration: none;
+  a {
+    color: variables.$colorFontSecondary;
+    text-decoration: none;
 
-      &:hover {
-        color: variables.$colorDestacado;
-      }
+    &:hover {
+      color: variables.$colorDestacado;
+    }
+  }
+
+  .link-inhabilitado {
+    color: grey;
+    cursor: default;
+
+    &:hover {
+      color: grey;
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "../utilities/_variables.scss";
+
 /* FLECHA */
 
 .flecha {
@@ -16,4 +18,5 @@ footer {
   color: variables.$colorFontSecondary;
   background-color: variables.$colorbgSecondary;
   grid-area: footer;
+  margin-top: variables.$margin-base;
 }

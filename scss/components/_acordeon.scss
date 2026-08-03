@@ -1,13 +1,15 @@
+@use "../utilities/_variables.scss";
+
 /* FAQ (MOBILE) */
 .accordion-item {
   background-color: transparent;
 }
 
 .accordion {
-  --bs-accordion-btn-bg: variables.$colorbgSecondary;
-  --bs-accordion-btn-color: variables.$colorFontSecondary;
-  --bs-accordion-active-bg: variables.$colorbgDesktop;
-  --bs-accordion-active-color: variables.$colorVerdeSeco;
+  --bs-accordion-btn-bg: #{variables.$colorbgSecondary};
+  --bs-accordion-btn-color: #{variables.$colorFontSecondary};
+  --bs-accordion-active-bg: #{variables.$colorbgDesktop};
+  --bs-accordion-active-color: #{variables.$colorFontTertiary};
   font-size: variables.$font-size-base;
   color: variables.$colorFontBase;
   line-height: variables.$line-height-base;
