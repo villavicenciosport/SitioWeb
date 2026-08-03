@@ -1,0 +1,103 @@
+/* PRESENTACIÓN GRID (MOBILE) */
+.presentacion-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-img {
+  margin: 10px auto;
+  object-fit: cover;
+}
+
+.imagen-principal-trebol {
+  display: none;
+}
+.imagen-principal-vaquita {
+  grid-area: imagen-principal-vaquita;
+  display: block;
+  order: 1;
+}
+.introduccion-presentacion {
+  order: 2;
+}
+
+.desarrollo-presentacion {
+  order: 3;
+}
+.cierre-presentacion {
+  order: 4;
+}
+
+// TABLET
+@media (min-width: 481px) and (max-width: 1023px) {
+  /* PRESENTACIÓN GRID (TABLET) */
+  .presentacion-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagen-principal-trebol {
+    order: 1;
+    display: block;
+  }
+  .introduccion-presentacion {
+    order: 2;
+  }
+
+  .desarrollo-presentacion {
+    order: 3;
+  }
+  .cierre-presentacion {
+    order: 4;
+  }
+
+  .imagen-principal-vaquita {
+    display: none;
+  }
+}
+
+// DESKTOP
+@media (min-width: 1024px) {
+  /* PRESENTACIÓN GRID (DESKTOP) */
+  .presentacion-grid {
+    display: grid;
+    /* declarar las áreas, cuadrícula, zonas */
+    grid-template-areas:
+      "imagen-principal-trebol introduccion-presentacion"
+      "imagen-principal-trebol desarrollo-presentacion"
+      "cierre-presentacion cierre-presentacion";
+    /*cantidad y tamaño de cada fila */
+    grid-template-rows: auto;
+    /*cantidad y tamaño columna */
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .introduccion-presentacion {
+    grid-area: introduccion-presentacion;
+    /* background-color: gray; */
+  }
+
+  .desarrollo-presentacion {
+    grid-area: desarrollo-presentacion;
+    /* background-color: beige; */
+  }
+
+  .cierre-presentacion {
+    grid-area: cierre-presentacion;
+    /* background-color: yellow; */
+  }
+
+  .imagen-principal-trebol {
+    grid-area: imagen-principal-trebol;
+    margin: 8px auto;
+    display: block;
+    /* background-color: aquamarine; */
+  }
+
+  .imagen-principal-vaquita {
+    display: none;
+    margin: 2px;
+    /* background-color: brown; */
+  }
+}

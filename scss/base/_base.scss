@@ -1,0 +1,98 @@
+/* Reseset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  padding: variables.$padding-small;
+  margin-bottom: variables.$margin-base;
+  text-align: center;
+  background-color: variables.$colorbgSecondary;
+  border-bottom: variables.$borde-base;
+  /* position: sticky;
+  top: 0; */
+}
+
+/* Cuerpo */
+
+body {
+  background-color: variables.$colorbgMobile;
+  color: variables.$colorFontSecondary;
+
+  margin: 0;
+  width: 100%;
+
+  font-family: variables.$font-family-base;
+}
+
+/* Secciones */
+
+section {
+  width: 80%;
+  padding: variables.$padding-base;
+  margin: variables.$margin-small auto;
+  margin-top: 0;
+  color: variables.$colorFontTertiary;
+  background-color: variables.$colorbgContainer;
+  margin-bottom: variables.$margin-small;
+}
+
+/* Párrafo */
+
+p {
+  font-size: variables.$font-size-base;
+  color: variables.$colorFontBase;
+  line-height: variables.$line-height-base;
+}
+
+.texto-destacado {
+  color: variables.$colorDestacado;
+  font-weight: bold;
+}
+
+/* Links */
+
+a {
+  color: variables.$colorFontSecondary;
+  text-decoration: none;
+
+  &:hover {
+    color: variables.$colorDestacado;
+  }
+}
+
+.link-inhabilitado,
+.link-inhabilitado:hover {
+  color: grey;
+  cursor: default;
+}
+
+// TABLET
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    background-color: variables.$colorbgTablet;
+    width: 100%;
+  }
+
+  section {
+    padding: variables.$padding-base;
+    width: 80%;
+    margin: 0 auto variables.$margin-small;
+    color: variables.$colorVerdeSeco;
+    background-color: variables.$colorbgContainer;
+  }
+}
+
+// DESKTOP
+@media (min-width: 1024px) {
+  /* BODY (DESKTOP) */
+  body {
+    background-color: variables.$colorbgDesktop;
+    width: 100%;
+  }
+}

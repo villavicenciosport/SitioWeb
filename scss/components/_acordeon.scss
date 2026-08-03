@@ -1,0 +1,20 @@
+/* FAQ (MOBILE) */
+.accordion-item {
+  background-color: transparent;
+}
+
+.accordion {
+  --bs-accordion-btn-bg: variables.$colorbgSecondary;
+  --bs-accordion-btn-color: variables.$colorFontSecondary;
+  --bs-accordion-active-bg: variables.$colorbgDesktop;
+  --bs-accordion-active-color: variables.$colorVerdeSeco;
+  font-size: variables.$font-size-base;
+  color: variables.$colorFontBase;
+  line-height: variables.$line-height-base;
+}
+
+.accordion-button {
+  font-size: variables.$font-size-small;
+  font-weight: 500;
+  padding: 1rem;
+}

@@ -1,0 +1,61 @@
+/* GALERIA BS (MOBILE) */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  position: absolute;
+  top: 160px;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 6px auto;
+}
+
+.carousel-control-prev {
+  left: 1.2rem;
+}
+
+.carousel-control-next {
+  right: 1.2rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: 60%;
+  background-color: variables.$colorFontBase;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.desc-carrusel {
+  position: static;
+  background-color: variables.$colorbgSecondary;
+  margin-top: 1rem;
+  padding: 1rem;
+  h5 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.carousel-indicators {
+  top: 340px;
+}
+
+// DESKTOP
+@media (min-width: 1024px) {
+  /* GALERIA BS (DESKTOP) */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

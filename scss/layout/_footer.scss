@@ -1,0 +1,19 @@
+/* FLECHA */
+
+.flecha {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 40px;
+  right: 40px;
+  color: variables.$colorFontSecondary;
+}
+
+/* Footer */
+
+footer {
+  padding: variables.$padding-small;
+  color: variables.$colorFontSecondary;
+  background-color: variables.$colorbgSecondary;
+  grid-area: footer;
+}

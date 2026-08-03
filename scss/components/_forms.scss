@@ -1,0 +1,35 @@
+/* Contacto (MOBILE) */
+#Contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$box-gap-base;
+  margin: 0 auto;
+
+  max-width: 90%;
+
+  padding: variables.$padding-small;
+  border: 5px dotted variables.$colorFontBase;
+
+  font-size: variables.$font-size-base;
+  color: variables.$colorFontTertiary;
+  line-height: variables.$line-height-base;
+}
+
+// TABLET
+@media (min-width: 481px) and (max-width: 1023px) {
+  /* Contacto (TABLET) */
+  #Contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$box-gap-base;
+    margin: 0 auto;
+  }
+}
+
+// DESKTOP
+@media (min-width: 1024px) {
+  /* Contacto (DESKTOP) */
+  #Contacto form {
+    max-width: 50%;
+  }
+}

@@ -187,12 +187,6 @@ h3 {
   gap: 6px;
 }
 
-/* .card.box-proyectos {
-  border: 5px rgb(100, 69, 54) dotted; */
-/* width: 200px; */
-/* flex: 1;
-  padding: 20px;
-} */
 .btn {
   border: rgb(178, 103, 94);
   background-color: rgb(178, 103, 94);
@@ -393,7 +387,7 @@ footer {
   width: 3rem;
   height: 3rem;
   background-size: 60%;
-  background-color: rgba(100, 69, 54, 0.8);
+  background-color: rgb(100, 69, 54);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -660,13 +654,7 @@ footer {
     flex-wrap: wrap;
     gap: 6px;
   }
-  /* .card.box-proyectos {
-    border: 5px rgb(100, 69, 54) dotted;
-    /* width: 200px; */
-  /* flex: 1;
-    padding: 20px;
-  }
-  */
+
   /* CARDS SERVICIOS (DESKTOP) */
   .contenedor-gridbox {
     display: grid;

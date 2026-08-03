@@ -1,0 +1,133 @@
+/* Cards (Flex-box) (MOBILE) */
+.card {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.card.contenedor-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: variables.$padding-small;
+  flex-wrap: wrap;
+  gap: variables.$box-gap-base;
+}
+
+.btn {
+  border: variables.$colorFontSecondary;
+  background-color: variables.$colorFontSecondary;
+
+  &:hover {
+    border: variables.$colorbgSecondary;
+    background-color: variables.$colorbgSecondary;
+  }
+}
+
+.desc-carrusel .btn {
+  position: relative;
+  z-index: 3;
+}
+
+/* CARDS SERVICIOS (GRIDBOX) (MOBILE) */
+.contenedor-gridbox {
+  display: grid;
+  grid-template-areas:
+    "personalizada"
+    "personajes"
+    "editoriales"
+    "concept";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  padding: variables.$padding-small;
+  gap: variables.$box-gap-base;
+}
+
+.box-servicios {
+  border: variables.$borde-base;
+  width: 100%;
+  padding: variables.$padding-small;
+  margin: 4px;
+  justify-content: center;
+}
+
+.personalizada {
+  grid-area: personalizada;
+}
+
+.personajes {
+  grid-area: personajes;
+}
+
+.editoriales {
+  grid-area: editoriales;
+}
+
+.concept {
+  grid-area: concept;
+}
+
+// TABLET
+@media (min-width: 481px) and (max-width: 1023px) {
+  /* CARDS SERVICIOS (TABLET) */
+
+  .contenedor-gridbox {
+    display: grid;
+    grid-template-areas:
+      "personalizada personajes"
+      "editoriales concept";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: variables.$padding-small;
+    gap: variables.$box-gap-base;
+
+    max-width: 80%;
+
+    padding: variables.$padding-small;
+    border: variables.$borde-base;
+
+    font-size: variables.$font-size-base;
+    color: variables.$colorVerdeSeco;
+    line-height: variables.$line-height-base;
+  }
+}
+
+// DESKTOP
+@media (min-width: 1024px) {
+  /* Cards (Flex-box) (DESKTOP) */
+  .card {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  .card.contenedor-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: variables.$padding-small;
+    flex-wrap: wrap;
+    gap: variables.$box-gap-base;
+  }
+
+  /* CARDS SERVICIOS (DESKTOP) */
+  .contenedor-gridbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "personalizada personalizada"
+      "personajes editoriales"
+      "personajes concept";
+    grid-template-rows: repeat(3, 1fr);
+    padding: variables.$padding-small;
+    gap: variables.$box-gap-base;
+  }
+
+  .box-servicios {
+    border: variables.$borde-base;
+    padding: variables.$padding-small;
+    margin: 4px;
+  }
+}

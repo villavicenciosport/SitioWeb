@@ -1,0 +1,24 @@
+/* Headers */
+
+h1,
+h2,
+h3 {
+  color: variables.$colorFontSecondary;
+}
+
+h1 {
+  font-family: "Ole", cursive;
+  font-size: 80px;
+  font-weight: 400;
+  margin: 0 0 1.25rem 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: variables.$font-size-small;
+  font-weight: 500;
+}
