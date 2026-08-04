@@ -21,12 +21,12 @@ img.logo {
 }
 
 /* MENU BS (MOBILE) */
-.navbar {
+.mhamburguesa {
   position: relative;
   background-color: variables.$colorbgMobile;
 }
 
-.navbar-toggler {
+.toggler-mhamburguesa {
   border: none;
   padding: 0.3rem;
   @include mixins.centrar-flexbox(center, center);
@@ -36,14 +36,14 @@ img.logo {
   }
 }
 
-.navbar-toggler-icon {
+.toggler-mhamburguesa-icono {
   margin: auto;
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.navbar-collapse {
+.mhamburguesa-persiana {
   position: absolute;
   top: 100%;
   right: 0;
@@ -56,11 +56,11 @@ img.logo {
 // DESKTOP
 @media (min-width: 1024px) {
   /* MENU BS (DESKTOP) */
-  .navbar {
+  .mhamburguesa {
     background-color: transparent;
   }
 
-  .navbar-collapse {
+  .mhamburguesa-persiana {
     position: static;
     background-color: transparent;
     width: 100%;

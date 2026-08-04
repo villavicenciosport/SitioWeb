@@ -245,12 +245,12 @@ img.logo {
 }
 
 /* MENU BS (MOBILE) */
-.navbar {
+.mhamburguesa {
   position: relative;
   background-color: rgb(196, 163, 129);
 }
 
-.navbar-toggler {
+.toggler-mhamburguesa {
   border: none;
   padding: 0.3rem;
   display: flex;
@@ -260,18 +260,18 @@ img.logo {
   flex-wrap: nowrap;
   gap: 0;
 }
-.navbar-toggler:focus {
+.toggler-mhamburguesa:focus {
   box-shadow: none;
 }
 
-.navbar-toggler-icon {
+.toggler-mhamburguesa-icono {
   margin: auto;
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.navbar-collapse {
+.mhamburguesa-persiana {
   position: absolute;
   top: 100%;
   right: 0;
@@ -282,10 +282,10 @@ img.logo {
 
 @media (min-width: 1024px) {
   /* MENU BS (DESKTOP) */
-  .navbar {
+  .mhamburguesa {
     background-color: transparent;
   }
-  .navbar-collapse {
+  .mhamburguesa-persiana {
     position: static;
     background-color: transparent;
     width: 100%;
