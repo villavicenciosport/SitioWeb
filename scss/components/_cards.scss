@@ -1,4 +1,6 @@
 @use "../utilities/_variables.scss";
+@use "../utilities/_mixins.scss";
+@use "../base/_tipografias.scss";
 
 /* Cards (Flex-box) (MOBILE) */
 .card {
@@ -8,13 +10,15 @@
 }
 
 .card.contenedor-flexbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @include mixins.centrar-flexbox(
+    column,
+    center,
+    flex-start,
+    wrap,
+    variables.$box-gap-base
+  );
+
   padding: variables.$padding-small;
-  flex-wrap: wrap;
-  gap: variables.$box-gap-base;
 }
 
 .btn {
@@ -96,13 +100,9 @@
   }
 
   .card.contenedor-flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    @include mixins.centrar-flexbox(column, center, variables.$box-gap-base);
+
     padding: variables.$padding-small;
-    flex-wrap: wrap;
-    gap: variables.$box-gap-base;
   }
 
   /* CARDS SERVICIOS (DESKTOP) */

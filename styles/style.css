@@ -1,22 +1,29 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ole&display=swap");
+/* font-family: "Ole", cursive; */
+/* Headers */
+h1 {
+  font-family: "Ole", cursive;
+  font-size: 80px;
+  font-weight: 400;
+  margin: 0 0 1.25rem 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
 /* Reseset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* Header */
-header {
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 3.125rem;
-  text-align: center;
-  background-color: rgb(187, 214, 134);
-  border-bottom: 5px rgb(100, 69, 54) dotted;
-  /* position: sticky;
-  top: 0; */
 }
 
 /* Cuerpo */
@@ -39,6 +46,13 @@ section {
   margin-bottom: 2rem;
 }
 
+/* Headers */
+h1,
+h2,
+h3 {
+  color: rgb(178, 103, 94);
+}
+
 /* Párrafo */
 p {
   font-size: 18px;
@@ -56,12 +70,25 @@ a {
   color: rgb(178, 103, 94);
   text-decoration: none;
 }
-a .link-inhabilitado {
+a.link-inhabilitado {
   color: grey;
   cursor: default;
 }
 a:hover {
   color: rgb(93, 169, 177);
+}
+
+/* Listas items de menú */
+.items-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.items-menu a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 @media (min-width: 481px) and (max-width: 1023px) {
@@ -84,12 +111,192 @@ a:hover {
     width: 100%;
   }
 }
+/* FLECHA */
+.flecha {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 40px;
+  right: 40px;
+  color: rgb(178, 103, 94);
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  color: rgb(178, 103, 94);
+  background-color: rgb(187, 214, 134);
+  grid-area: footer;
+  margin-top: 3.125rem;
+}
+
+/* LAYOUT GRID (MOBILE) */
+.layout-grid {
+  display: grid;
+  grid-template-areas: "header" "main" "aside" "footer";
+  grid-template-columns: 1fr;
+  min-height: 100vh; /* (para que todo el layout ocupe el largo entero de la pantalla) */
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  grid-area: aside;
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  background-color: rgb(238, 241, 189);
+}
+
+img.side-img {
+  width: 300px;
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  /* LAYOUT (TABLET) */
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0 auto;
+    padding: 40px;
+    height: fit-content;
+    width: 80%;
+    background-color: rgb(238, 241, 189);
+  }
+}
+@media (min-width: 1024px) {
+  /* LAYOUT GRID (DESKTOP) */
+  .layout-grid {
+    display: grid;
+    grid-template-areas: "header header" "main aside" "footer footer";
+    grid-template-columns: 1fr 400px; /* (2 columnas) */
+    grid-template-rows: auto 1fr auto; /* (3 filas) */
+    min-height: 100vh; /* (para que todo el layout ocupe la pantalla entera) */
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0 auto;
+    margin-right: 3.125rem;
+    margin-bottom: 3.125rem;
+    height: fit-content;
+    width: auto;
+    padding: 20px;
+    background-color: rgb(238, 241, 189);
+  }
+}
+/* Header */
+header {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 3.125rem;
+  text-align: center;
+  background-color: rgb(187, 214, 134);
+  border-bottom: 5px rgb(100, 69, 54) dotted;
+  /* position: sticky;
+  top: 0; */
+}
+
+/* Menú (MOBILE) */
+.menu-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.menu-header {
+  display: none;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px; */
+}
+
+img.logo {
+  width: 100px;
+}
+
+/* MENU BS (MOBILE) */
+.navbar {
+  position: relative;
+  background-color: rgb(196, 163, 129);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  margin: auto;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 999;
+  background-color: rgb(238, 241, 189);
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  /* MENU BS (DESKTOP) */
+  .navbar {
+    background-color: transparent;
+  }
+  .navbar-collapse {
+    position: static;
+    background-color: transparent;
+    width: 100%;
+  }
+}
 /* FAQ (MOBILE) */
-.accordion-item {
+.preg-acordeon-faq {
   background-color: transparent;
 }
 
-.accordion {
+.acordeon-faq {
   --bs-accordion-btn-bg: rgb(187, 214, 134);
   --bs-accordion-btn-color: rgb(178, 103, 94);
   --bs-accordion-active-bg: rgb(221, 208, 106);
@@ -99,7 +306,7 @@ a:hover {
   line-height: 1.6;
 }
 
-.accordion-button {
+.boton-acordeon-faq {
   font-size: 22px;
   font-weight: 500;
   padding: 1rem;
@@ -126,9 +333,9 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
   flex-wrap: wrap;
   gap: 6px;
+  padding: 20px;
 }
 
 .btn {
@@ -199,12 +406,12 @@ a:hover {
   }
   .card.contenedor-flexbox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: 6px;
+    flex-wrap: nowrap;
+    gap: 0;
     padding: 20px;
-    flex-wrap: wrap;
-    gap: 6px;
   }
   /* CARDS SERVICIOS (DESKTOP) */
   .contenedor-gridbox {
@@ -222,10 +429,13 @@ a:hover {
   }
 }
 /* Contacto (MOBILE) */
-#Contacto form {
+#contacto form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: 6px;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 0;
   margin: 0 auto;
   max-width: 90%;
   padding: 20px;
@@ -237,7 +447,7 @@ a:hover {
 
 @media (min-width: 481px) and (max-width: 1023px) {
   /* Contacto (TABLET) */
-  #Contacto form {
+  #contacto form {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -246,40 +456,38 @@ a:hover {
 }
 @media (min-width: 1024px) {
   /* Contacto (DESKTOP) */
-  #Contacto form {
+  #contacto form {
     max-width: 50%;
   }
 }
 /* GALERIA BS (MOBILE) */
-.carousel-item img {
+.img-carr img {
   height: 400px;
   object-fit: cover;
 }
 
-.carousel-inner {
+.cont-carr {
   position: relative;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
+.boton-siguiente-carr,
+.boton-anterior-carr {
   position: absolute;
   top: -80px;
   padding: 10px;
-  max-width: 100%;
-  max-height: 100%;
   margin: 6px auto;
 }
 
-.carousel-control-prev {
+.boton-anterior-carr {
   left: 1.2rem;
 }
 
-.carousel-control-next {
+.boton-siguiente-carr {
   right: 1.2rem;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.boton-siguiente-carr-icono,
+.boton-anterior-carr-icono {
   width: 3rem;
   height: 3rem;
   background-size: 60%;
@@ -298,207 +506,16 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-.carousel-indicators {
+.indicadores-carr {
   top: 340px;
 }
 
 @media (min-width: 1024px) {
   /* GALERIA BS (DESKTOP) */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  .boton-anterior-carr-icono,
+  .boton-siguiente-carr-icono {
     width: 3.5rem;
     height: 3.5rem;
-  }
-}
-/* FLECHA */
-.flecha {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  bottom: 40px;
-  right: 40px;
-  color: rgb(178, 103, 94);
-}
-
-/* Footer */
-footer {
-  padding: 20px;
-  color: rgb(178, 103, 94);
-  background-color: rgb(187, 214, 134);
-  grid-area: footer;
-  margin-top: 3.125rem;
-}
-
-/* LAYOUT GRID (MOBILE) */
-.layout-grid {
-  display: grid;
-  grid-template-areas: "header" "main" "aside" "footer";
-  grid-template-columns: 1fr;
-  min-height: 100vh; /* (para que todo el layout ocupe el largo entero de la pantalla) */
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
-aside {
-  grid-area: aside;
-  margin: auto;
-  padding: 40px;
-  width: 80%;
-  background-color: rgb(238, 241, 189);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (min-width: 481px) and (max-width: 1023px) {
-  /* LAYOUT (TABLET) */
-  aside {
-    margin: 0 auto;
-    padding: 40px;
-    height: fit-content;
-    width: 80%;
-    background-color: rgb(238, 241, 189);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (min-width: 1024px) {
-  /* LAYOUT GRID (DESKTOP) */
-  .layout-grid {
-    display: grid;
-    grid-template-areas: "header header" "main aside" "footer footer";
-    grid-template-columns: 1fr 400px; /* (2 columnas) */
-    grid-template-rows: auto 1fr auto; /* (3 filas) */
-    min-height: 100vh; /* (para que todo el layout ocupe la pantalla entera) */
-  }
-  aside {
-    grid-area: aside;
-    margin: 0 auto;
-    margin-right: 3.125rem;
-    margin-bottom: 3.125rem;
-    height: fit-content;
-    width: auto;
-    padding: 20px;
-    background-color: rgb(238, 241, 189);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* Headers */
-h1,
-h2,
-h3 {
-  color: rgb(178, 103, 94);
-}
-
-h1 {
-  font-family: "Ole", cursive;
-  font-size: 80px;
-  font-weight: 400;
-  margin: 0 0 1.25rem 0;
-}
-
-h2 {
-  font-size: 30px;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 22px;
-  font-weight: 500;
-}
-
-/* Menú (MOBILE) */
-.menu-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-header {
-  display: none;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 25px; */
-}
-
-/* MENU BS (MOBILE) */
-.navbar {
-  position: relative;
-  background-color: rgb(196, 163, 129);
-}
-.navbar ul {
-  font-size: 22px;
-  font-weight: 500;
-  color: rgb(178, 103, 94);
-  list-style-type: none;
-}
-.navbar a {
-  color: rgb(178, 103, 94);
-  text-decoration: none;
-}
-.navbar a:hover {
-  color: rgb(93, 169, 177);
-}
-.navbar .link-inhabilitado {
-  color: grey;
-  cursor: default;
-}
-.navbar .link-inhabilitado:hover {
-  color: grey;
-}
-
-.navbar-toggler {
-  border: none;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.navbar-toggler-icon {
-  margin: auto;
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.navbar-collapse {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 999;
-  background-color: rgb(238, 241, 189);
-  padding: 1rem;
-}
-
-@media (min-width: 1024px) {
-  /* MENU BS (DESKTOP) */
-  .navbar {
-    background-color: transparent;
-  }
-  .navbar-collapse {
-    position: static;
-    background-color: transparent;
-    width: 100%;
   }
 }
 /* PRESENTACIÓN GRID (MOBILE) */
@@ -515,12 +532,14 @@ h3 {
 
 .imagen-principal-trebol {
   display: none;
+  width: 200px;
 }
 
 .imagen-principal-vaquita {
   grid-area: imagen-principal-vaquita;
   display: block;
   order: 1;
+  width: 100px;
 }
 
 .introduccion-presentacion {
@@ -594,6 +613,5 @@ h3 {
     /* background-color: brown; */
   }
 }
-/* font-family: "Ole", cursive; */
 
 /*# sourceMappingURL=style.css.map */

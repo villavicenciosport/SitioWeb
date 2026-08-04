@@ -1,0 +1,29 @@
+@use "../utilities/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Ole&display=swap");
+/* font-family: "Ole", cursive; */
+
+// FUENTES
+$font-family-base: Helvetica, Arial, sans-serif;
+$font-size-base: 18px;
+$font-size-small: 22px;
+
+$line-height-base: 1.6;
+
+/* Headers */
+
+h1 {
+  font-family: "Ole", cursive;
+  font-size: 80px;
+  font-weight: 400;
+  margin: 0 0 1.25rem 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: $font-size-small;
+  font-weight: 500;
+}

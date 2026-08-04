@@ -1,23 +1,11 @@
 @use "../utilities/_variables.scss";
+@use "../base/_tipografias.scss";
 
 /* Reseset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* Header */
-
-header {
-  width: 100%;
-  padding: variables.$padding-small;
-  margin-bottom: variables.$margin-base;
-  text-align: center;
-  background-color: variables.$colorbgSecondary;
-  border-bottom: variables.$borde-base;
-  /* position: sticky;
-  top: 0; */
 }
 
 /* Cuerpo */
@@ -29,7 +17,7 @@ body {
   margin: 0;
   width: 100%;
 
-  font-family: variables.$font-family-base;
+  font-family: tipografias.$font-family-base;
 }
 
 /* Secciones */
@@ -44,12 +32,20 @@ section {
   margin-bottom: variables.$margin-small;
 }
 
+/* Headers */
+
+h1,
+h2,
+h3 {
+  color: variables.$colorFontSecondary;
+}
+
 /* Párrafo */
 
 p {
-  font-size: variables.$font-size-base;
+  font-size: tipografias.$font-size-base;
   color: variables.$colorFontBase;
-  line-height: variables.$line-height-base;
+  line-height: tipografias.$line-height-base;
 }
 
 .texto-destacado {
@@ -63,13 +59,27 @@ a {
   color: variables.$colorFontSecondary;
   text-decoration: none;
 
-  .link-inhabilitado {
+  &.link-inhabilitado {
     color: grey;
     cursor: default;
   }
 
   &:hover {
     color: variables.$colorDestacado;
+  }
+}
+
+/* Listas items de menú */
+.items-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    font-size: tipografias.$font-size-small;
+    font-weight: 500;
   }
 }
 

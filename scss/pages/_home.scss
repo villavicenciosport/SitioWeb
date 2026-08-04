@@ -1,4 +1,5 @@
 @use "../utilities/_variables.scss";
+@use "../base/_tipografias.scss";
 
 /* PRESENTACIÓN GRID (MOBILE) */
 .presentacion-grid {
@@ -14,11 +15,13 @@
 
 .imagen-principal-trebol {
   display: none;
+  width: 200px;
 }
 .imagen-principal-vaquita {
   grid-area: imagen-principal-vaquita;
   display: block;
   order: 1;
+  width: 100px;
 }
 .introduccion-presentacion {
   order: 2;

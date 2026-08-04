@@ -1,11 +1,10 @@
 @use "../utilities/_variables.scss";
+@use "../utilities/_mixins.scss";
+@use "../base/_tipografias.scss";
 
 /* Menú (MOBILE) */
 .menu-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.centrar-flexbox(row, space-between, center);
 }
 
 .menu-header {
@@ -17,43 +16,20 @@
   gap: 25px; */
 }
 
+img.logo {
+  width: 100px;
+}
+
 /* MENU BS (MOBILE) */
 .navbar {
   position: relative;
   background-color: variables.$colorbgMobile;
-
-  ul {
-    font-size: variables.$font-size-small;
-    font-weight: 500;
-    color: variables.$colorFontSecondary;
-    list-style-type: none;
-  }
-
-  a {
-    color: variables.$colorFontSecondary;
-    text-decoration: none;
-
-    &:hover {
-      color: variables.$colorDestacado;
-    }
-  }
-
-  .link-inhabilitado {
-    color: grey;
-    cursor: default;
-
-    &:hover {
-      color: grey;
-    }
-  }
 }
 
 .navbar-toggler {
   border: none;
   padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include mixins.centrar-flexbox(center, center);
 
   &:focus {
     box-shadow: none;

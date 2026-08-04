@@ -1,4 +1,6 @@
 @use "../utilities/_variables.scss";
+@use "../utilities/_mixins.scss";
+@use "../base/_tipografias.scss";
 
 /* LAYOUT GRID (MOBILE) */
 .layout-grid {
@@ -24,28 +26,29 @@ footer {
 }
 
 aside {
+  @include mixins.centrar-flexbox(column, flex-start, center);
+
   grid-area: aside;
-  margin: auto;
+  margin: 0 auto;
   padding: variables.$padding-base;
   width: 80%;
   background-color: variables.$colorbgContainer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+img.side-img {
+  width: 300px;
 }
 
 // TABLET
 @media (min-width: 481px) and (max-width: 1023px) {
   /* LAYOUT (TABLET) */
   aside {
+    @include mixins.centrar-flexbox(column, center, center);
     margin: 0 auto;
     padding: variables.$padding-base;
     height: fit-content;
     width: 80%;
     background-color: variables.$colorbgContainer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -64,7 +67,8 @@ aside {
   }
 
   aside {
-    grid-area: aside;
+    @include mixins.centrar-flexbox(column, flex-start, center);
+
     margin: 0 auto;
     margin-right: variables.$margin-base;
     margin-bottom: variables.$margin-base;
@@ -72,8 +76,5 @@ aside {
     width: auto;
     padding: variables.$padding-small;
     background-color: variables.$colorbgContainer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }

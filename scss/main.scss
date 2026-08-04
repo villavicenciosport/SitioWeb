@@ -1,7 +1,15 @@
 @charset "UTF-8";
 
+@use "./utilities/_mixins.scss";
+@use "./utilities/_variables.scss";
+
 @use "./base/_base.scss";
 @use "./base/_tipografias.scss";
+
+@use "./layout/_footer.scss";
+@use "./layout/_grid.scss";
+@use "./layout/_header.scss";
+@use "./layout/_nav.scss";
 
 @use "./components/_acordeon.scss";
 @use "./components/_buttons.scss";
@@ -9,15 +17,4 @@
 @use "./components/_forms.scss";
 @use "./components/_galeria.scss";
 
-@use "./layout/_footer.scss";
-@use "./layout/_grid.scss";
-@use "./layout/_header.scss";
-@use "./layout/_nav.scss";
-
 @use "./pages/_home.scss";
-
-@use "./utilities/_mixins.scss";
-@use "./utilities/_variables.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Ole&display=swap");
-/* font-family: "Ole", cursive; */

@@ -1,10 +1,11 @@
 @use "../utilities/_variables.scss";
+@use "../utilities/_mixins.scss";
+@use "../base/_tipografias.scss";
 
 /* Contacto (MOBILE) */
-#Contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: variables.$box-gap-base;
+#contacto form {
+  @include mixins.centrar-flexbox(column, variables.$box-gap-base);
+
   margin: 0 auto;
 
   max-width: 90%;
@@ -12,15 +13,15 @@
   padding: variables.$padding-small;
   border: 5px dotted variables.$colorFontBase;
 
-  font-size: variables.$font-size-base;
+  font-size: tipografias.$font-size-base;
   color: variables.$colorFontTertiary;
-  line-height: variables.$line-height-base;
+  line-height: tipografias.$line-height-base;
 }
 
 // TABLET
 @media (min-width: 481px) and (max-width: 1023px) {
   /* Contacto (TABLET) */
-  #Contacto form {
+  #contacto form {
     display: flex;
     flex-direction: column;
     gap: variables.$box-gap-base;
@@ -31,7 +32,7 @@
 // DESKTOP
 @media (min-width: 1024px) {
   /* Contacto (DESKTOP) */
-  #Contacto form {
+  #contacto form {
     max-width: 50%;
   }
 }

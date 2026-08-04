@@ -1,22 +1,23 @@
 @use "../utilities/_variables.scss";
+@use "../base/_tipografias.scss";
 
 /* FAQ (MOBILE) */
-.accordion-item {
+.preg-acordeon-faq {
   background-color: transparent;
 }
 
-.accordion {
+.acordeon-faq {
   --bs-accordion-btn-bg: #{variables.$colorbgSecondary};
   --bs-accordion-btn-color: #{variables.$colorFontSecondary};
   --bs-accordion-active-bg: #{variables.$colorbgDesktop};
   --bs-accordion-active-color: #{variables.$colorFontTertiary};
-  font-size: variables.$font-size-base;
+  font-size: tipografias.$font-size-base;
   color: variables.$colorFontBase;
-  line-height: variables.$line-height-base;
+  line-height: tipografias.$line-height-base;
 }
 
-.accordion-button {
-  font-size: variables.$font-size-small;
+.boton-acordeon-faq {
+  font-size: tipografias.$font-size-small;
   font-weight: 500;
   padding: 1rem;
 }
